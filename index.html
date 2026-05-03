@@ -1,0 +1,1133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Maison Lune</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>Maison Lune</h2>
+<div>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('products')">Products</a>
+<a onclick="showPage('cart', this)" class="cart-link">
+Cart 
+<span id="cartCount" class="cart-badge">0</span>
+</a>
+<a onclick="showPage('comments')">Reviews</a>
+<a onclick="showPage('about', this)">About</a>
+</div>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page">
+<p class="hero-label">New Season</p>
+<div class="hero-box">
+<div class="hero-content">
+<h1>Maison Lune</h1>
+<p>Where softness meets luxury.</p>
+<button onclick="showPage('products')">Explore Collection</button>
+</div>
+</div>
+
+<div class="new-collection">
+
+<div class="new-header">
+    <h2 class="new-title">New Collection ✨</h2>
+    <p class="subtitle">Discover our latest soft luxury arrivals</p>
+</div>
+
+<div class="new-grid">
+
+<div class="new-card" onclick="goToProduct('Ruffle')">
+<img src="10.jpg">
+<h3>Blue Ruffle Bloom</h3>
+<span class="badge">NEW</span>
+</div>
+
+<div class="new-card" onclick="goToProduct('gem')">
+<img src="a3.jpg">
+<h3>Pink Gem Radiance</h3>
+<span class="badge">NEW</span>
+</div>
+
+<div class="new-card" onclick="goToProduct('corset')">
+<img src="14.jpg">
+<h3>Floral Corset Charm</h3>
+<span class="badge">NEW</span>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PRODUCTS -->
+<div id="products" class="page"
+<h2>   Maison Lune Colection </h2>
+<div class="category-bar">
+<button onclick="filterProduct('all')">All</button>
+<button onclick="filterProduct('dress')">Dress</button>
+<button onclick="filterProduct('top')">Topwear</button>
+<button onclick="filterProduct('bottoms')">Bottoms</button>
+<button onclick="filterProduct('outer')">Outer</button>
+<button onclick="filterProduct('shoes')">Shoes</button>
+<button onclick="filterProduct('accecoris')">Accecoris</button>
+</div>
+<div class="product-container">
+
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="dress.jpg" class="active" onclick="openProduct('Blush Silk Dress',1560000,5)">
+        <img src="dress1.png" onclick="openProduct('Blush Silk Dress',1560000,5)">
+        <img src="dress2.png" onclick="openProduct('Blush Silk Dress',1560000,5)">
+        <img src="dress3.png" onclick="openProduct('Blush Silk Dress',1560000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+    <h3>Blush Silk Dress</h3>
+    <p>A graceful floor-length gown in blush pink silk, featuring delicate straps and a flowing skirt that exudes timeless elegance.</p>
+    <div class="price">IDR 1.560.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="knit.jpg" class="active" onclick="openProduct('Rose Knit Sweater',300000,5)">
+        <img src="knit1.png" onclick="openProduct('Rose Knit Sweater',300000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+    <h3>Rose Knit Sweater</h3>
+    <p>A soft cream cardigan adorned with playful pink bows and matching buttons, perfect for adding a sweet touch to casual looks.</p>
+    <div class="price">IDR 300.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="mini.jpg" class="active" onclick="openProduct('Blush Ballet Darling',3000000,5)">
+        <img src="mini1.png" onclick="openProduct('Blush Ballet Darling',3000000,5)">
+        <img src="mini2.png" onclick="openProduct('Blush Ballet Darling',3000000,5)">
+        <img src="mini3.png" onclick="openProduct('Blush Ballet Darling',3000000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+    <h3>Blush Ballet Darling</h3>
+    <p>A soft pink halter dress with ruffled layers and a bow detail, bringing a dreamy ballerina-inspired elegance.</p>
+    <div class="price">IDR 3.000.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="dres.jpg" class="active" onclick="openProduct('Rosalie Garden Dress',1800000,5)">
+        <img src="dres1.png" onclick="openProduct('Rosalie Garden Dress',1800000,5)">
+        <img src="dres2.png" onclick="openProduct('Rosalie Garden Dress',1800000,5)">
+        <img src="dres3.png" onclick="openProduct('Rosalie Garden Dress',1800000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+    <h3>Rosalie Garden Dress</h3>
+    <p>A floral mini dress paired with a draped pink sweater and bow neckline, playful and charming like a garden muse.</p>
+    <div class="price">IDR 1.800.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="oneset.jpg" class="active" onclick="openProduct('Velvet Ribbon Doll',1240000,5)">
+        <img src="oneset1.png" onclick="openProduct('Velvet Ribbon Doll',1240000,5)">
+        <img src="oneset2.png" onclick="openProduct('Velvet Ribbon Doll',1240000,5)">
+        <img src="oneset3.png" onclick="openProduct('Velvet Ribbon Doll',1240000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Velvet Ribbon Doll</h3>
+<p>A pink off-shoulder knit top with ribbon accents, styled with a plaid ruffled skirt for sweet doll-like charm.</p>
+<div class="price">IDR 1.240.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="pink.jpg" class="active" onclick="openProduct('Sweet Lace Bow',580000,5)">
+        <img src="pink1.png" onclick="openProduct('Sweet Lace Bow',580000,5)">
+        <img src="pink2.png" onclick="openProduct('Sweet Lace Bow',580000,5)">
+        <img src="pink3.png" onclick="openProduct('Sweet Lace Bow',580000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+    <h3>Sweet Lace Bow</h3>
+<p>A soft pink off-shoulder top with delicate lace trim and a ribbon bow, giving a sweet and feminine touch.</p>
+<div class="price">IDR 580.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t1.jpg" class="active" onclick="openProduct('Flower Ruffle Charm<',250000,5)">
+        <img src="t1-1.png" onclick="openProduct('Flower Ruffle Charm<',250000,5)">
+        <img src="t1-2.png" onclick="openProduct('Flower Ruffle Charm<',250000,5)">
+        <img src="t1-3.png" onclick="openProduct('Flower Ruffle Charm<',250000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Flower Ruffle Charm</h3>
+<p>A fitted pink top decorated with tiny black Flowers, ruffled sleeves, and lace details for playful romantic style.</p>
+<div class="price">IDR. 250.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="dog.jpg" class="active" onclick="openProduct('Petite Paw Season',800000,5)">
+        <img src="dog1.png" onclick="openProduct('Petite Paw Season',800000,5)">
+        <img src="dog2.png" onclick="openProduct('Petite Paw Season',800000,5)">
+        <img src="dog3.png" onclick="openProduct('Petite Paw Season',800000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Petite Paw Season</h3>
+<p>An asymmetrical pink top featuring cute dog illustrations, bringing a whimsical and casual vibe.</p>
+<div class="price">IDR 800.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="4.jpg" class="active" onclick="openProduct('Pearl Blossom Bow',2700000,5)">
+        <img src="4-1.png" onclick="openProduct('Pearl Blossom Bow',2700000,5)">
+        <img src="4-2.png" onclick="openProduct('Pearl Blossom Bow',2700000,5)">
+        <img src="4-3.png" onclick="openProduct('Pearl Blossom Bow',2700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Pearl Blossom Bow  </h3>
+<p>Light pink strapless dress with floral appliqués, pearl accents, and a large bow at the back with trailing ribbon — dreamy and romantic.</p>
+<div class="price">IDR 2.700.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="5.jpg" class="active" onclick="openProduct('Lavender Ruffle Muse',2500000,5)">
+        <img src="5-1.jpeg" onclick="openProduct('Lavender Ruffle Muse',2500000,5)">
+        <img src="5-2.png" onclick="openProduct('Lavender Ruffle Muse',2500000,5)">
+        <img src="5-3.jpeg" onclick="openProduct('Lavender Ruffle Muse',2500000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Lavender Ruffle Muse  </h3>
+<p>Pale lavender strapless dress with ruched bodice, layered ruffle hem, and a long white ribbon bow at the front — playful yet elegant.</p>
+<div class="price">IDR 2.500.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="7.jpg" class="active" onclick="openProduct('Silver Sparkle Bloom',2700000,5)">
+        <img src="7-1.png" onclick="openProduct('Silver Sparkle Bloom',2700000,5)">
+        <img src="7-2.png" onclick="openProduct('Silver Sparkle Bloom',2700000,5)">
+        <img src="7-3.png" onclick="openProduct('Silver Sparkle Bloom',2700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Silver Sparkle Bloom </h3>
+<p>A silver-gray strapless dress with shimmering embellishments and a voluminous skirt, perfect for a dazzling evening look.</p>
+<div class="price">IDR 2.700.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="8.jpg" class="active" onclick="openProduct('Lavender Ruffle Dream',2500000,5)">
+        <img src="8-1.png" onclick="openProduct('Lavender Ruffle Dream',2500000,5)">
+        <img src="8-2.png" onclick="openProduct('Lavender Ruffle Dream',2500000,5)">
+        <img src="8-3.png" onclick="openProduct('Lavender Ruffle Dream',2500000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Lavender Ruffle Dream  </h3>
+<p>A light lavender dress with layered ruffles and soft texture, bringing a romantic and graceful charm.</p>
+<div class="price">IDR 2.500.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="9.jpg" class="active" onclick="openProduct('>Blush Lace Satin',2600000,5)">
+        <img src="9-1.png" onclick="openProduct('>Blush Lace Satin',2600000,5)">
+        <img src="9-2.png" onclick="openProduct('>Blush Lace Satin',2600000,5)">
+        <img src="9-3.png" onclick="openProduct('>Blush Lace Satin',2600000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Blush Lace Satin  </h3>
+<p>A pale pink dress with a lace bodice and flared satin skirt, combining elegance with youthful sweetness.</p>
+<div class="price">IDR 2.600.000</div>
+</div>
+
+<div class="card" id="Ruffle" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="10.jpg" class="active" onclick="openProduct('Blue Ruffle Bloom',2900000,5)">
+        <img src="10-1.png" onclick="openProduct('Blue Ruffle Bloom',2900000,5)">
+        <img src="10-2.png" onclick="openProduct('Blue Ruffle Bloom',2900000,5)">
+        <img src="10-3.png" onclick="openProduct('Blue Ruffle Bloom',2900000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Blue Ruffle Bloom  </h3>
+<p>A layered ruffle dress in soft blue with floral embellishments, radiating delicate charm and elegance.</p>
+<div class="price">IDR 2.900.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="11.jpg" class="active" onclick="openProduct('Ribbon Mist Elegance',2700000,5)">
+        <img src="11-1.png" onclick="openProduct('Ribbon Mist Elegance',2700000,5)">
+        <img src="11-2.png" onclick="openProduct('Ribbon Mist Elegance',2700000,5)">
+        <img src="11-3.jpeg" onclick="openProduct('Ribbon Mist Elegance',2700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Ribbon Mist Elegance  </h3>
+<p>A structured blue bodice with sheer ribbon-like sleeves, blending sophistication with airy grace.</p>
+<div class="price">IDR 2.700.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="12.jpg" class="active" onclick="openProduct('Azure Draped Muse',3000000,5)">
+        <img src="12-1.png" onclick="openProduct('Azure Draped Muse',3000000,5)">
+        <img src="12-2.png" onclick="openProduct('Azure Draped Muse',3000000,5)">
+        <img src="12-3.png" onclick="openProduct('Azure Draped Muse',3000000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Azure Draped Muse</h3>
+<p>An asymmetrical blue dress with draped fabric and gathered details, offering a modern yet romantic silhouette.</p>
+<div class="price">IDR  3.000.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="13.jpg" class="active" onclick="openProduct('Blue Tiered Elegance',31000005)">
+        <img src="13-1.png" onclick="openProduct('Blue Tiered Elegance',3100000,5)">
+        <img src="13-2.png" onclick="openProduct('Blue Tiered Elegance',3100000,5)">
+        <img src="13-3.png" onclick="openProduct('Blue Tiered Elegance',3100000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Blue Tiered Elegance  </h3>
+<p>A shiny light blue gown with a fitted bodice and tiered ruffles, perfect for a graceful evening look.</p>
+<div class="price">IDR 3.100.000</div>
+</div>
+
+<div class="card" id="corset" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="14.jpg" class="active" onclick="openProduct('Floral Corset Charm',29000005)">
+        <img src="14-1.png" onclick="openProduct('Floral Corset Charm',2900000,5)">
+        <img src="14-2.png" onclick="openProduct('Floral Corset Charm',2900000,5)">
+        <img src="14-3.png" onclick="openProduct('Floral Corset Charm',2900000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Floral Corset Charm  </h3>
+<p>A cream and olive green corset-style dress with floral embellishments and a short ruffled skirt, blending vintage and playful style.</p>
+<div class="price">IDR 2.900.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="15.jpg" class="active" onclick="openProduct('Pastel Frill Fantasy',3200000,5)">
+        <img src="15-1.png" onclick="openProduct('Pastel Frill Fantasy',3200000,5)">
+        <img src="15-2.png" onclick="openProduct('Pastel Frill Fantasy',3200000,5)">
+        <img src="15-3.png" onclick="openProduct('Pastel Frill Fantasy',3200000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Pastel Frill Fantasy  </h3>
+<p>A pastel pink and mint green frilly dress with lace and bows, evoking a sweet Lolita-inspired charm.</p>
+<div class="price">IDR 3.200.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s1.jpg" class="active" onclick="openProduct('Blush Bow Heels',1200000,5)">
+        <img src="s1-1.JPEG" onclick="openProduct('Blush Bow Heels',1200000,5)">
+        <img src="s1-2.JPEG" onclick="openProduct('Blush Bow Heels',1200000,5)">
+        <img src="s1-3.png" onclick="openProduct('Blush Bow Heels',1200000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Blush Bow Heels  </h3>
+<p>Pastel pink high heels with delicate ribbon bows, feminine and elegant for special occasions.</p>
+<div class="price">IDR 1.200.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s2.jpg" class="active" onclick="openProduct('Floral Charm Pumps',1350000,5)">
+        <img src="s2-1.png" onclick="openProduct('Floral Charm Pumps',13500000,5)">
+        <img src="s2-2.png" onclick="openProduct('Floral Charm Pumps',1350000,5)">
+        <img src="s2-3.png" onclick="openProduct('Floral Charm Pumps',1350000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Floral Charm Pumps   </h3>
+<p>Pink heels decorated with soft floral patterns, bringing a romantic vintage touch.</p>
+<div class="price">IDR 1.350.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s4.jpg" class="active" onclick="openProduct('Maroon Stripe Sneakers',750000,5)">
+        <img src="s4-1.png" onclick="openProduct('Maroon Stripe Sneakers',750000,5)">
+        <img src="s4-2.png" onclick="openProduct('Maroon Stripe Sneakers',750000,5)">
+        <img src="s4-3.png" onclick="openProduct('Maroon Stripe Sneakers',750000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Maroon Stripe Sneakers  </h3>
+<p>Casual maroon sneakers with white stripes and brown soles, sporty yet chic.</p>
+<div class="price">IDR 750.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+        <img src="a1.jpg" class="active" onclick="openProduct('Lace Bow Heels',1400000,5)">
+<h3>Golden Pearl Rows</h3>
+<p>Triple-row pearl necklace with a gold ornamental centerpiece, timeless and elegant.</p>
+<div class="price">IDR 1.800.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+        <img src="a2.jpg" class="active" onclick="openProduct('Heart Crystal Charm',2000000,5)">
+<h3>Heart Crystal Charm  </h3>
+<p>Pearl and gold chain necklace with a pink heart pendant and teardrop crystal, romantic and graceful.</p>
+<div class="price">IDR 2.000.000</div>
+</div>
+
+<div class="card" id="gem" data-category="accecoris">
+        <img src="a3.jpg" class="active" onclick="openProduct('Pink Gem Radiance',2200000,5)">
+<h3>Pink Gem Radiance  </h3>
+<p>Silver necklace with pink gemstone accents and a central gem surrounded by smaller stones, refined and sparkling.</p>
+<div class="price">IDR  2.200.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a4.jpg" class="active" onclick="openProduct('Plaid Bell Bow',350000,5)">
+        <img src="a4-1.png" onclick="openProduct('Plaid Bell Bow',350000,5)">
+        <img src="a4-2.png" onclick="openProduct('Plaid Bell Bow',350000,5)">
+        <img src="a4-3.png" onclick="openProduct('Plaid Bell Bow',350000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Plaid Bell Bow  </h3>
+<p>Pink plaid headband with a metallic bow and tiny bell, playful and charming.</p>
+<div class="price">IDR 350.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a5.jpg" class="active" onclick="openProduct('Pearl Shine Crown',420000,5)">
+        <img src="a5-1.png" onclick="openProduct('Pearl Shine Crown',420000,5)">
+        <img src="a5-2.png" onclick="openProduct('Pearl Shine Crown',420000,5)">
+        <img src="a5-3.png" onclick="openProduct('Pearl Shine Crown',420000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Pearl Shine Crown </h3>
+<p>Headband embellished with pearls and shiny beads, ornate and elegant.</p>
+<div class="price">IDR 420.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a6.jpg" class="active" onclick="openProduct('White Woven Grace',380000,5)">
+        <img src="a6-1.png" onclick="openProduct('White Woven Grace',380000,5)">
+        <img src="a6-2.png" onclick="openProduct('White Woven Grace',380000,5)">
+        <img src="a6-3.png" onclick="openProduct('White Woven Grace',380000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>White Woven Grace </h3>
+<p>White woven-texture headband with a subtle metallic logo detail, chic and versatile.</p>
+<div class="price">IDR 380.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+        <img src="a7.jpg" class="active" onclick="openProduct('Golden Pearl Clips',280000,5)">
+<h3>Golden Pearl Clips</h3>
+<p>Pair of pearl-decorated hair clips with gold accents, delicate and versatile.</p>
+<div class="price">IDR 280.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a8.jpg" class="active" onclick="openProduct('Floral Silver Glasses',600000,5)">
+        <img src="a8-1.png" onclick="openProduct('Floral Silver Glasses',600000,5)">
+        <img src="a8-2.png" onclick="openProduct('Floral Silver Glasses',600000,5)">
+        <img src="a8-3.png" onclick="openProduct('Floral Silver Glasses',600000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Floral Silver Glasses  </h3>
+<p>Silver eyeglasses with tiny pink flower decorations on the frame, sweet and unique.</p>
+<div class="price">IDR 600.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a9.jpg" class="active" onclick="openProduct('Miu Miu Sunglasses',1800000,5)">
+        <img src="a9-1.png" onclick="openProduct('Miu Miu Sunglasses',1800000,5)">
+        <img src="a9-2.png" onclick="openProduct('Miu Miu Sunglasses',1800000,5)">
+        <img src="a9-3.png" onclick="openProduct('Miu Miu Sunglasses',1800000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Miu Miu Sunglasses</h3>
+<p>Black sunglasses with gold “MIU MIU” branding on the temples, bold yet elegant.</p>
+<div class="price">IDR 1.800.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+        <img src="a10.jpg" class="active" onclick="openProduct('Pearl Bow Drops',480000,5)">
+<h3>Pearl Bow Drops  </h3>
+<p>Earrings shaped like pink bows with pearl drops, sweet and feminine.</p>
+<div class="price">IDR 480.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="a12.jpg" class="active" onclick="openProduct('Silver Edge Elegance',1500000,5)">
+        <img src="a12-1.png" onclick="openProduct('Silver Edge Elegance',1500000,5)">
+        <img src="a12-2.png" onclick="openProduct('Silver Edge Elegance',1500000,5)">
+        <img src="a12-3.png" onclick="openProduct('Silver Edge Elegance',1500000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Silver Edge Elegance</h3>
+<p>Silver eyeglasses with decorative detailing along the frame edges, refined and stylish.</p>
+<div class="price">IDR 1.500.000</div>
+</div>
+
+<div class="card" data-category="accecoris">
+        <img src="a13.jpg" class="active" onclick="openProduct('Crystal Row Clips',300000,5)">
+<h3>Crystal Row Clips  </h3>
+<p>Pair of silver hairpins decorated with sparkling rhinestones, minimalist yet glamorous.</p>
+<div class="price">IDR 300.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s6.jpg" class="active" onclick="openProduct('Ruched Brown Boots',1700000,5)">
+        <img src="s6-1.png" onclick="openProduct('Ruched Brown Boots',1700000,5)">
+        <img src="s6-2.png" onclick="openProduct('Ruched Brown Boots',1700000,5)">
+        <img src="s6-3.png" onclick="openProduct('Ruched Brown Boots',1700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Ruched Brown Boots  </h3>
+<p>Tall brown stiletto boots with pointed toes and ruched shaft design, bold yet sophisticated.</p>
+<div class="price">IDR 1.700.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s7.jpg" class="active" onclick="openProduct('Mary Jane Char',1200000,5)">
+        <img src="s7-1.png" onclick="openProduct('Mary Jane Char',1200000,5)">
+        <img src="s7-2.png" onclick="openProduct('Mary Jane Char',1200000,5)">
+        <img src="s7-3.png" onclick="openProduct('Mary Jane Char',1200000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Mary Jane Char</h3>
+<p>Brown Mary Jane shoes with chunky block heels and strap detail, vintage-inspired with modern comfort.</p>
+<div class="price">IDR 1.200.000</div>
+</div>
+
+<div class="card" data-category="shoes">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="s8.jpg" class="active" onclick="openProduct('Cream Slouch Boots',1600000,5)">
+        <img src="s8-1.png" onclick="openProduct('Cream Slouch Boots',1600000,5)">
+        <img src="s8-2.png" onclick="openProduct('Cream Slouch Boots',1600000,5)">
+        <img src="s8-3.png" onclick="openProduct('Cream Slouch Boots',1600000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Cream Slouch Boots  </h3>
+<p>Knee-high boots in soft beige with rounded toes and medium block heels, styled with a subtle slouched shaft for modern elegance.</p>
+<div class="price">IDR 1.600.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b1.jpg" class="active" onclick="openProduct('Satin Bloom Skirt',950000,5)">
+        <img src="b1-1.png" onclick="openProduct('Satin Bloom Skirt',950000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Satin Bloom Skirt   </h3>
+<p>Shiny pink satin skirt with sheer tulle draping and tiny floral embellishments, soft and romantic.</p>
+<div class="price">IDR  950.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b2.jpg" class="active" onclick="openProduct('Heart Ruffle Layers',850000,5)">
+        <img src="b2-1.png" onclick="openProduct('Heart Ruffle Layers',850000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Heart Ruffle Layers  </h3>
+<p>Light pink ruffled skirt with layered frills and playful black heart patterns, sweet and youthful.</p>
+<div class="price">IDR  850.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b3.jpg" class="active" onclick="openProduct('Golden Button Pleats',1000000,5)">
+        <img src="b3-1.png" onclick="openProduct('Golden Button Pleats',1000000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Golden Button Pleats  </h3>
+<p>Textured pink skirt with pleated detail and two gold buttons at the waist, chic and versatile.</p>
+<div class="price">IDR 1.000.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b10.jpg" class="active" onclick="openProduct('Floral Ruffle Skirt',700000,5)">
+        <img src="b10-1.png" onclick="openProduct('Floral Ruffle Skirt',700000,5)">
+        <img src="b10-2.png" onclick="openProduct('Floral Ruffle Skirt',700000,5)">
+        <img src="b10-3.png" onclick="openProduct('Floral Ruffle Skirt',700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Floral Ruffle Skirt</h3>
+<p>A soft pink skirt adorned with lace, floral, and layered ruffles, evoking a romantic Rococo-inspired elegance.</p>
+<div class="price">IDR 700.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b11.jpg" class="active" onclick="openProduct('Beige Pleated Charm',680000,5)">
+        <img src="b11-1.png" onclick="openProduct('Beige Pleated Charm',680000,5)">
+        <img src="b11-2.png" onclick="openProduct('Beige Pleated Charm',680000,5)">
+        <img src="b11-3.png" onclick="openProduct('Beige Pleated Charm',680000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Beige Pleated Charm </h3>
+<p>High-waisted beige shorts with tailored pleats and a chic belt detail, structured yet versatile for casual elegance.</p>
+<div class="price">IDR 680.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b17.jpg" class="active" onclick="openProduct('Brown Textured Grace',980000,5)">
+        <img src="b17-1.png" onclick="openProduct('Brown Textured Grace',980000,5)">
+        <img src="b17-2.png" onclick="openProduct('Brown Textured Grace',980000,5)">
+        <img src="b17-3.png" onclick="openProduct('Brown Textured Grace',980000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Brown Textured Grace </h3>
+<p>Wide-leg brown trousers with subtle textured fabric, refined and versatile for day-to-night wear.</p>
+<div class="price">IDR 980.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b18.jpg" class="active" onclick="openProduct('Brown Pleated Elegance',780000,5)">
+        <img src="b18-1.png" onclick="openProduct('Brown Pleated Elegance',780000,5)">
+        <img src="b18-2.png" onclick="openProduct('Brown Pleated Elegance',780000,5)">
+        <img src="b18-3.png" onclick="openProduct('Brown Pleated Elegance',780000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Brown Pleated Elegance</h3>
+<p>Dark brown pleated skirt with a black belt and gold buckle, classic and refined.</p>
+<div class="price">IDR 780.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b19.jpg" class="active" onclick="openProduct('Beige Woven Charm',720000,5)">
+        <img src="b19-1.png" onclick="openProduct('Beige Woven Charm',720000,5)">
+        <img src="b19-2.png" onclick="openProduct('Beige Woven Charm',720000,5)">
+        <img src="b19-3.png" onclick="openProduct('Beige Woven Charm',720000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Beige Woven Charm  </h3>
+<p>Beige A-line skirt with subtle woven texture, soft and versatile for everyday chic.</p>
+<div class="price">IDR 720.000</div>
+</div>
+
+<div class="card" data-category="bottoms">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="b22.jpg" class="active" onclick="openProduct('Layered Frill Grace',780000,5)">
+        <img src="b22-1.png" onclick="openProduct('Layered Frill Grace',780000,5)">
+        <img src="b22-2.png" onclick="openProduct('Layered Frill Grace',780000,5)">
+        <img src="b22-3.png" onclick="openProduct('Layered Frill Grace',780000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Layered Frill Grace </h3>
+<p>Gray layered skirt with white frilled trim and underskirt detail, romantic and refined.</p>
+<div class="price">IDR  780.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="20.jpg" class="active" onclick="openProduct('Floral Bow Grace',1450000,5)">
+        <img src="20-1.png" onclick="openProduct('Floral Bow Grace',1450000,5)">
+        <img src="20-2.png" onclick="openProduct('Floral Bow Grace',1450000,5)">
+        <img src="20-3.png" onclick="openProduct('Floral Bow Grace',1450000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Floral Bow Grace  </h3>
+<p>Strapless white dress with black floral patterns and a sheer black shoulder bow, romantic and refined.</p>
+<div class="price">IDR 1.450.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="21.jpg" class="active" onclick="openProduct('Polka Dot Charm',1200000,5)">
+        <img src="21-1.png" onclick="openProduct('Polka Dot Charm',1200000,5)">
+        <img src="21-2.png" onclick="openProduct('Polka Dot Charm',1200000,5)">
+        <img src="21-3.png" onclick="openProduct('Polka Dot Charm',1200000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Polka Dot Charm  </h3>
+<p>Black sleeveless dress with white dots, neck bow, and ruffled hem, playful yet elegant.</p>
+<div class="price">IDR 1.200.000</div>
+</div>
+
+<div class="card" data-category="dress">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="22.jpg" class="active" onclick="openProduct('Lily’s Vintage Pleats',1350000,5)">
+        <img src="22-1.png" onclick="openProduct('Lily’s Vintage Pleats',1350000,5)">
+        <img src="22-2.png" onclick="openProduct('Lily’s Vintage Pleats',1350000,5)">
+        <img src="22-3.png" onclick="openProduct('Lily’s Vintage Pleats',1350000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Lily’s Vintage Pleats  </h3>
+<p>Sleeveless white pleated dress with a neck bow and black ruffled hem, vintage-inspired and graceful.</p>
+<div class="price">IDR 1.350.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t3.jpg" class="active" onclick="openProduct('Watercolor Satin Glow',720000,5)">
+        <img src="t3-1.png" onclick="openProduct('Watercolor Satin Glow',720000,5)">
+        <img src="t3-2.png" onclick="openProduct('Watercolor Satin Glow',720000,5)">
+        <img src="t3-3.png" onclick="openProduct('Watercolor Satin Glow',720000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Watercolor Satin Glow</h3>
+<p>Satin halter top with draped neckline in pink-and-green watercolor pattern, soft and artistic.</p>
+<div class="price">IDR 720.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t9.jpg" class="active" onclick="openProduct('Black Bow Charm',690000,5)">
+        <img src="t9-1.png" onclick="openProduct('Black Bow Charm',690000,5)">
+        <img src="t9-2.png" onclick="openProduct('Black Bow Charm',690000,5)">
+        <img src="t9-3.png" onclick="openProduct('Black Bow Charm',690000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Black Bow Charm  </h3>
+<p>Sleeveless black top with a large white neck bow, elegant and striking.</p>
+<div class="price">IDR 690.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t14.jpg" class="active" onclick="openProduct('Pastel Floral Ruche',720000,5)">
+        <img src="t14-1.png" onclick="openProduct('Pastel Floral Ruche',720000,5)">
+        <img src="t14-2.png" onclick="openProduct('Pastel Floral Ruche',720000,5)">
+        <img src="t14-3.png" onclick="openProduct('Pastel Floral Ruche',720000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Pastel Floral Ruche  </h3>
+<p>One-shoulder ruched floral top in pastel pink, yellow, and green, soft and romantic.</p>
+<div class="price">IDR  720.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t15.jpg" class="active" onclick="openProduct('Green Sheer Grace',700000,5)">
+        <img src="t15-1.png" onclick="openProduct('Green Sheer Grace',700000,5)">
+        <img src="t15-2.png" onclick="openProduct('Green Sheer Grace',700000,5)">
+        <img src="t15-3.png" onclick="openProduct('Green Sheer Grace',700000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Green Sheer Grace  </h3>
+<p>Strapless green top with sheer overlay and matching neck tie, fresh and chic.</p>
+<div class="price">IDR  700.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t16.jpg" class="active" onclick="openProduct('Olive Draped Glow',710000,5)">
+        <img src="t16-1.png" onclick="openProduct('Olive Draped Glow',710000,5)">
+        <img src="t16-2.png" onclick="openProduct('Olive Draped Glow',710000,5)">
+        <img src="t16-3.png" onclick="openProduct('Olive Draped Glow',710000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Olive Draped Glow  </h3>
+<p>Olive green halter top with draped neckline and embellished strap, chic and sophisticated.</p>
+<div class="price">IDR 710.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t18.jpg" class="active" onclick="openProduct('Sage Floral Bow',730000,5)">
+        <img src="t18-1.png" onclick="openProduct('Sage Floral Bow',730000,5)">
+        <img src="t18-2.png" onclick="openProduct('Sage Floral Bow',730000,5)">
+        <img src="t18-3.png" onclick="openProduct('Sage Floral Bow',730000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Sage Floral Bow  </h3>
+<p>Light sage halter top with floral patterns and neck bow tie, soft and feminine.</p>
+<div class="price">IDR 730.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t19.jpg" class="active" onclick="openProduct('Gray Asymmetry Charm',750000,5)">
+        <img src="t19-1.png" onclick="openProduct('Gray Asymmetry Charm',750000,5)">
+        <img src="t19-2.png" onclick="openProduct('Gray Asymmetry Charm',750000,5)">
+        <img src="t19-3.png" onclick="openProduct('Gray Asymmetry Charm',750000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Gray Asymmetry Charm  </h3>
+<p>Gray one-shoulder halter top with metallic strap accent, bold and modern.</p>
+<div class="price">IDR 750.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t20.jpg" class="active" onclick="openProduct('Beige Lace Draped Glow',740000,5)">
+        <img src="t20-1.png" onclick="openProduct('Beige Lace Draped Glow',740000,5)">
+        <img src="t20-2.png" onclick="openProduct('Beige Lace Draped Glow',740000,5)">
+        <img src="t20-3.png" onclick="openProduct('Beige Lace Draped Glow',740000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Beige Lace Draped Glow  </h3>
+<p>Beige lace halter top with asymmetrical neckline and draped scarf detail attached by a gold ring, delicate yet sophisticated.</p>
+<div class="price">IDR 740.000</div>
+</div>
+
+<div class="card" data-category="top">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="t21.jpg" class="active" onclick="openProduct('Brown One-Shoulder Ruche',720000,5)">
+        <img src="t21-1.png" onclick="openProduct('Brown One-Shoulder Ruche',720000,5)">
+        <img src="t21-2.png" onclick="openProduct('Brown One-Shoulder Ruche',720000,5)">
+        <img src="t21-3.png" onclick="openProduct('Brown One-Shoulder Ruche',720000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Brown One-Shoulder Ruche  </h3>
+<p>Dark brown one-shoulder ruched top in smooth stretch fabric, sleek and modern.</p>
+<div class="price">IDR 720.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="o2.jpg" class="active" onclick="openProduct('Brown Button Crop',1200000,5)">
+        <img src="o2-1.png" onclick="openProduct('Brown Button Crop',1200000,5)">
+        <img src="o2-2.png" onclick="openProduct('Brown Button Crop',1200000,5)">
+        <img src="o2-3.png" onclick="openProduct('Brown Button Crop',1200000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Brown Button Crop  </h3>
+<p>Dark brown cropped jacket with rounded collar and large buttons, classic and chic.</p>
+<div class="price">IDR 1.200.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="o3.jpg" class="active" onclick="openProduct('White Trim Elegance',1250000,5)">
+        <img src="o3-1.png" onclick="openProduct('White Trim Elegance',1250000,5)">
+        <img src="o3-2.png" onclick="openProduct('White Trim Elegance',1250000,5)">
+        <img src="o3-3.png" onclick="openProduct('White Trim Elegance',1250000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>White Trim Elegance  </h3>
+<p>White cropped jacket with black trim along edges and cuffs, refined and versatile.</p>
+<div class="price">IDR 1.250.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="o4.jpg" class="active" onclick="openProduct('Green Textured Charm',1180000,5)">
+        <img src="o4-1.png" onclick="openProduct('Green Textured Charm',1180000,5)">
+        <img src="o4-2.png" onclick="openProduct('Green Textured Charm',1180000,5)">
+        <img src="o4-3.png" onclick="openProduct('Green Textured Charm',1180000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Green Textured Charm  </h3>
+<p>Light green cropped jacket with textured fabric and front pockets, fresh and stylish.</p>
+<div class="price">IDR 1.180.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="o5.jpg" class="active" onclick="openProduct('White Gold Button Crop',1280000,5)">
+        <img src="o5-1.png" onclick="openProduct('White Gold Button Crop',1280000,5)">
+        <img src="o5-2.png" onclick="openProduct('White Gold Button Crop',1280000,5)">
+        <img src="o5-3.png" onclick="openProduct('White Gold Button Crop',1280000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>White Gold Button Crop  </h3>
+<p>Cropped white jacket with round neckline and dual rows of gold buttons, structured and elegant.</p>
+<div class="price">IDR 1.280.000</div>
+</div>
+
+<div class="card" data-category="outer">
+    <div class="img-slider">
+        <button class="arrow left" onclick="slide(this,-1); event.stopPropagation();">‹</button>
+        <img src="o6.jpg" class="active" onclick="openProduct('Black Pearl Knit Cardigan',1500000,5)">
+        <img src="o6-1.png" onclick="openProduct('Black Pearl Knit Cardigan',1500000,5)">
+        <img src="o6-2.png" onclick="openProduct('Black Pearl Knit Cardigan',1500000,5)">
+        <img src="o6-3.png" onclick="openProduct('Black Pearl Knit Cardigan',1500000,5)">
+        <button class="arrow right" onclick="slide(this,1); event.stopPropagation();">›</button>
+    </div>
+<h3>Black Pearl Knit Cardigan  </h3>
+<p>Cropped black knit cardigan with pearl-like buttons, textured and timeless.</p>
+<div class="price">IDR 1.150.000</div>
+</div>
+
+</div>
+</div>
+
+ <!-- CART -->
+<div id="cart" class="page">
+    <h2>Your Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <h3 id="totalPrice">Total: IDR 0</h3>
+
+    <button onclick="checkoutCart()">Checkout</button>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkoutForm" class="page">
+    <h2>Checkout Details</h2>
+
+    <form onsubmit="processCheckout(event)">
+        <input type="text" id="custName" placeholder="Full Name" required>
+        <input type="text" id="custAddress" placeholder="Address" required>
+
+        <input type="tel" id="custNumber" placeholder="Phone Number" 
+        required pattern="[0-9]{10,15}"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+        <select id="custPayment" required>
+            <option value="" disabled selected>Payment Method</option>
+            <option value="ewallet">E-Wallet</option>
+            <option value="cod">COD</option>
+            <option value="bank">Bank Transfer</option>
+        </select>
+
+        <button type="submit">Confirm Order</button>
+    </form>
+</div>
+
+<!-- REVIEWS SECTION -->
+<div id="reviews-section"> 
+
+  <!-- Kiri: list review -->
+  <div class="left-panel">
+    <div class="panel-header">
+      <div class="bubble-icon">💬</div>
+      <h2>Live Reviews</h2>
+    </div>
+    <div class="review-list" id="review-list"></div>
+  </div>
+
+  <!-- Kanan: form -->
+  <div class="right-panel">
+
+<div class="avatar-upload">
+  <div class="avatar-preview" id="avatar-preview">+</div>
+  <input type="file" id="avatar-input" accept="image/*" onchange="previewAvatar(this)" style="display:none;">
+</div>
+
+    <div class="field-box">
+      <span class="field-icon">👤</span>
+      <input type="text" id="inp-name" placeholder="Nama kamu" maxlength="30">
+    </div>
+
+    <div class="rating-row">
+      <span class="field-icon">☆</span>
+      <span>Rating</span>
+    </div>
+
+    <div class="star-picker">
+      <button class="sp" onclick="setRating(1)" onmouseenter="hov(1)" onmouseleave="unhov()">★</button>
+      <button class="sp" onclick="setRating(2)" onmouseenter="hov(2)" onmouseleave="unhov()">★</button>
+      <button class="sp" onclick="setRating(3)" onmouseenter="hov(3)" onmouseleave="unhov()">★</button>
+      <button class="sp" onclick="setRating(4)" onmouseenter="hov(4)" onmouseleave="unhov()">★</button>
+      <button class="sp" onclick="setRating(5)" onmouseenter="hov(5)" onmouseleave="unhov()">★</button>
+    </div>
+
+    <div class="textarea-box">
+      <div class="textarea-top">💬 <span>Komentar</span></div>
+      <textarea id="inp-comment" placeholder="Tulis komentar kamu..." maxlength="300" oninput="updChar()"></textarea>
+      <div class="char-count"><span id="cc">0</span>/300</div>
+    </div>
+
+    <button class="submit-btn" onclick="submitReview()">
+      Kirim Komentar 📨
+    </button>
+
+  </div>
+</div>
+
+<!-- Toast notif -->
+<div class="toast" id="toast">✅ Review sended! Thank you💕</div>
+
+<!-- ABOUT US -->
+<div id="about" class="page about-page">
+
+<div class="about-hero">
+    <img src="store.jpeg" class="about-banner">
+    <div class="about-overlay">
+        <h1>Maison Lune</h1>
+        <p>Softness. Elegance. Timeless femininity.</p>
+    </div>
+</div>
+
+<div class="about-container">
+
+<h2>Our Story</h2>
+<p>
+Maison Lune is a soft luxury fashion brand inspired by timeless femininity and delicate elegance.
+Founded as a dream of creating pieces that feel gentle yet sophisticated, Maison Lune brings
+together pastel tones, graceful silhouettes, and refined details to create a dreamy wardrobe
+for modern women.
+</p>
+
+<p>
+Each collection is carefully curated to reflect softness and confidence, allowing every wearer
+to express elegance effortlessly. From flowing dresses to charming knitwear, Maison Lune is
+designed to accompany your most beautiful moments.
+</p>
+
+<h2>Our Vision</h2>
+<p>
+To become a soft luxury fashion brand that celebrates femininity, elegance, and timeless beauty.
+</p>
+
+<h2>Our Mission</h2>
+<P>
+Create elegant and feminine designs <br>
+Use soft color palettes and premium aesthetics <br>
+Deliver timeless fashion pieces <br>
+Provide a dreamy shopping experience
+</p>
+
+<div class="about-features">
+
+<div class="feature-box">
+<h3>Premium Quality</h3>
+<p>Carefully selected materials for comfort and elegance.</p>
+</div>
+
+<div class="feature-box">
+<h3>Feminine Design</h3>
+<p>Soft silhouettes inspired by classic beauty.</p>
+</div>
+
+<div class="feature-box">
+<h3>Limited Collection</h3>
+<p>Exclusive pieces made for timeless wardrobes.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- STRUK -->
+<div id="receiptPage" class="page">
+    <h2>Order Receipt 🧾</h2>
+
+    <div id="receiptBox" class="status-box"></div>
+
+    <button onclick="downloadReceipt()">Download Receipt</button>
+    <button onclick="showPage('home')" class="back-home">
+        Back to Home
+    </button>
+</div>
+
+<!-- ORDER PROCESS -->
+<div id="orderProcess" class="page">
+<div class="status-box">
+<div id="orderSummary"></div>
+<h3 id="orderStatus"></h3>
+</div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
+<h2 id="pName"></h2>
+<p id="pPrice"></p>
+<p id="pStock"></p>
+
+<label>Size</label>
+<select>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<label>Quantity</label>
+<input type="number" id="qty" min="1" value="1">
+
+<button onclick="addSelectedToCart()">Add to Cart</button>
+<button onclick="buySelectedNow()">Buy Now</button>
+</div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!--FOOTER-->
+<div class="footer">
+<pre>
+Cornelia Street, Block C number. 16 
+© 2026 Maison Lune
+</pre>
+</div>
+
+<script src="script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
+
+
